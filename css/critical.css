@@ -1,0 +1,112 @@
+/* Critical CSS - Above the fold styles */
+@font-face {
+  font-family: Vijaya;
+  src: url('../fonts/vijaya.ttf') format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.navbar {
+  background-color: transparent;
+  padding-bottom: 20px;
+}
+
+.navbar-no-shadow-container {
+  z-index: 5;
+  background-color: transparent;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: block;
+}
+
+.navbar-wrapper {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  display: flex;
+}
+
+.nav-menu {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-link {
+  color: #fff;
+  letter-spacing: .25px;
+  margin: 0 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.home-hero-stack {
+  background-color: #fff;
+  background-image: url('../images/3079_Pankaj-Vohra_Mundhwa_Image-06_01.jpg');
+  background-position: 50% 63%;
+  background-size: cover;
+  min-height: 750px;
+  display: block;
+  position: relative;
+}
+
+.hero-wrapper-two {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.heading {
+  color: #fff;
+  margin-top: 100px;
+  font-family: Vijaya, Arial, sans-serif;
+  font-size: 77px;
+  font-weight: 400;
+  display: flex;
+  position: relative;
+}
+
+.heading-15 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  display: block;
+}
+
+.button-primary {
+  color: #000;
+  letter-spacing: 2px;
+  background-color: #fff;
+  border-radius: 13px;
+  padding: 12px 25px;
+  font-size: 16px;
+  line-height: 20px;
+  transition: all .2s;
+  text-decoration: none;
+}
+
+.button-primary:hover {
+  color: #fff;
+  background-color: #32343a;
+}
+
+/* Loading styles */
+img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}

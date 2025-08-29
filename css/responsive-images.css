@@ -1,0 +1,244 @@
+/* Responsive Images and Media Optimization */
+
+/* Base image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hero background images responsive */
+.home-hero-stack,
+.project-hero-stack,
+.taljai-hero-stack-copy,
+.parshwanagar-hero-stack-copy,
+.almanova-hero-stack-copy,
+.one-only-hero-stack-copy,
+.testimonial-slider-small {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; /* Better for mobile performance */
+}
+
+/* Project images responsive */
+.cf-service-image {
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.cf-service-image:hover {
+  transform: scale(1.02);
+}
+
+/* Logo responsive */
+.navbar-brand img {
+  max-width: clamp(80px, 15vw, 120px);
+  height: auto;
+}
+
+/* Gallery images */
+.f-image-cover,
+.f-image-cover-copy1,
+.f-image-cover-copy2,
+.f-image-cover-copy-copy3 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.f-gallery-image-tall {
+  height: clamp(300px, 50vw, 640px);
+}
+
+.f-gallery-image-s {
+  height: clamp(200px, 30vw, 300px);
+}
+
+/* Icon images responsive */
+.image-8,
+.pricing-image,
+.uui-layout75_icon-2 {
+  width: clamp(40px, 8vw, 60px);
+  height: clamp(40px, 8vw, 60px);
+  object-fit: contain;
+}
+
+/* Partner logos */
+.partners-logo,
+.image-15,
+.image-17,
+.image-18,
+.image-19,
+.image-20 {
+  max-width: clamp(120px, 20vw, 200px);
+  height: auto;
+  object-fit: contain;
+}
+
+/* Slider images */
+.slider-2 {
+  width: 100%;
+  height: clamp(250px, 50vw, 550px);
+  object-fit: cover;
+}
+
+.slide-2,
+.image-21,
+.image-22,
+.image-23,
+.image-24,
+.image-25 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile specific image adjustments */
+@media screen and (max-width: 768px) {
+  .cf-service-image {
+    min-height: 180px;
+    max-height: 220px;
+  }
+  
+  .f-gallery-image-tall {
+    height: clamp(250px, 40vw, 400px);
+  }
+  
+  .f-gallery-image-s {
+    height: clamp(150px, 25vw, 200px);
+  }
+  
+  .slider-2 {
+    height: clamp(200px, 40vw, 400px);
+  }
+  
+  /* Hero background position adjustments for mobile */
+  .home-hero-stack {
+    background-position: center 30%;
+  }
+  
+  .taljai-hero-stack-copy,
+  .parshwanagar-hero-stack-copy,
+  .almanova-hero-stack-copy,
+  .one-only-hero-stack-copy {
+    background-position: center 40%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cf-service-image {
+    min-height: 160px;
+    max-height: 200px;
+  }
+  
+  .partners-logo,
+  .image-15 {
+    max-width: clamp(100px, 25vw, 150px);
+  }
+  
+  .navbar-brand img {
+    max-width: clamp(70px, 20vw, 100px);
+  }
+  
+  /* Smaller icons for mobile */
+  .image-29,
+  .image-30,
+  .image-31 {
+    max-width: clamp(30px, 8vw, 40px);
+  }
+}
+
+/* Lazy loading optimization */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* WebP support with fallback */
+.webp .cf-service-image {
+  background-size: cover;
+  background-position: center;
+}
+
+/* High DPI display optimizations */
+@media screen and (min-resolution: 2dppx) {
+  .cf-service-image,
+  .f-image-cover,
+  .navbar-brand img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print optimizations */
+@media print {
+  .cf-service-image,
+  .f-image-cover {
+    max-height: 300px;
+    break-inside: avoid;
+  }
+  
+  .home-hero-stack,
+  .project-hero-stack {
+    background: none !important;
+    min-height: auto;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .cf-service-image {
+    transition: none;
+  }
+  
+  .cf-service-image:hover {
+    transform: none;
+  }
+}
+
+/* Container queries for modern browsers */
+@supports (container-type: inline-size) {
+  .cf-features-section-2-grid-cell {
+    container-type: inline-size;
+  }
+  
+  @container (max-width: 300px) {
+    .cf-service-image {
+      min-height: 140px;
+    }
+    
+    .heading-17 {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Aspect ratio support for modern browsers */
+@supports (aspect-ratio: 1) {
+  .cf-service-image {
+    aspect-ratio: 4/3;
+    height: auto;
+  }
+  
+  .f-gallery-image-tall {
+    aspect-ratio: 3/4;
+    height: auto;
+  }
+  
+  .f-gallery-image-s {
+    aspect-ratio: 16/9;
+    height: auto;
+  }
+}

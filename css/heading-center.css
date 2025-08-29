@@ -1,0 +1,19 @@
+/* Force Center All Headings */
+* h1, * h2, * h3, * h4, * h5, * h6,
+.heading, .heading-12, .heading-13, .heading-14, .heading-15, .heading-17,
+.cf-features-section-2-heading, .centered-heading, .centered-heading-3, .centered-heading-4,
+.uui-heading-medium-3, .uui-heading-medium-4, .uui-heading-medium-5, .uui-heading-medium-6,
+.uui-heading-subheading-2, .pricing-title, .project-details-text-3 {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.hero-wrapper-two {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+}

@@ -1,0 +1,197 @@
+/* Page-Specific Responsive Improvements */
+
+/* About Page */
+.about-page .content-wrapper {
+  max-width: 70ch;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.about-page p {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .about-page .image-text-layout {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page .content-wrapper {
+    padding: 0 16px;
+  }
+  
+  .about-page .cta-button {
+    width: 100%;
+  }
+}
+
+/* Projects Page */
+.projects-page .cf-features-section-2-grid {
+  max-width: 1200px;
+}
+
+@media (min-width: 1200px) {
+  .projects-page .cf-features-section-2-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .projects-page .cf-features-section-2-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .projects-page .f-button-primary {
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-page .cf-features-section-2-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-page .heading-17 {
+    font-size: clamp(18px, 4vw, 22px);
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-page .cf-service-paragraph {
+    -webkit-line-clamp: 2;
+  }
+  
+  .projects-page .f-button-primary {
+    width: 100%;
+  }
+}
+
+/* Career Page */
+.career-page .job-description {
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+.career-page .form-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .career-page .job-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .career-page .form-input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .career-page .job-card {
+    padding: 20px;
+  }
+  
+  .career-page .touch-target {
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .career-page .job-description {
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  
+  .career-page .apply-button {
+    width: 100%;
+    min-height: 48px;
+  }
+}
+
+/* Contact Page */
+.contact-page .form-container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.contact-page .info-form-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+@media (max-width: 1024px) {
+  .contact-page .info-form-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page .form-field-2col {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-page .button-padding {
+    padding: 16px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page .uui-form_input {
+    width: 100%;
+    min-height: 48px;
+    font-size: 16px;
+  }
+  
+  .contact-page .uui-button {
+    width: 100%;
+    min-height: 48px;
+  }
+  
+  .contact-page .field-label {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+/* Universal improvements */
+.page-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(16px, 5vw, 48px);
+}
+
+.text-content {
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+.button-full-mobile {
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .button-full-mobile {
+    width: 100%;
+    min-height: 48px;
+  }
+}
+
+/* Hamburger menu trigger adjustment */
+@media (max-width: 1024px) {
+  .w-nav-button {
+    display: block;
+  }
+  
+  .nav-menu-wrapper {
+    display: none;
+  }
+  
+  .nav-menu-wrapper.w--open {
+    display: flex;
+  }
+}
