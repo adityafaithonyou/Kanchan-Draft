@@ -1,0 +1,21 @@
+{
+  "name": "kanchan-developers-site",
+  "version": "1.0.0",
+  "description": "Kanchan Developers website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "lint": "eslint js/*.js",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "echo 'CSS minification - use tools like cssnano'",
+    "minify-js": "echo 'JS minification - use tools like terser'",
+    "optimize-images": "echo 'Image optimization - use tools like imagemin'",
+    "serve-prod": "python3 -m http.server 8000 --directory ."
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "keywords": ["webflow", "real-estate", "kanchan-developers"],
+  "author": "Kanchan Developers",
+  "license": "MIT"
+}
